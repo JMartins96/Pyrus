@@ -1,0 +1,389 @@
+@media(max-height: 50.75em){
+    .logotipo-img{
+        width: 20rem;
+        margin-top: -2rem;
+        margin-bottom: -2rem;
+    }
+
+    .logotipo h2{
+        font-size: 2.3rem;
+    }
+    .logotipo h3{
+        font-size: 1.2rem;
+    }
+}
+
+
+/* WIDTH LIMIT:1088PX */
+
+@media(max-width: 68em){
+    html{
+        font-size: 100%;
+    }
+}
+
+/* WIDTH LIMIT:968PX */
+
+@media(max-width: 60.5em){
+
+
+    .secção{
+        padding-top: 0rem ;
+        padding-bottom: 0rem ;
+    }
+    .foco{
+        padding-bottom: 5rem;
+    }
+    .missao{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .missao-slider{
+        height: 20rem;
+        width: 100%;
+        justify-content: space-between;
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+    }
+
+    #MissãoFrase{
+        grid-row: 2/3;
+    }
+
+    .missao-slider-logo{
+        flex-direction: row;
+        justify-content: space-between;
+        align-self: center;
+        flex: 1 0 30rem;
+    }
+
+    .missao-slider-content{
+        width: 30rem;
+        height: 20rem;
+    }
+
+    .missão-info{
+        padding-right: 1rem;
+    }
+
+    .slider-left-arrow, .slider-right-arrow{
+        align-self: center;
+    }
+
+    .slider-left-arrow img{
+        margin-bottom: -3rem ;
+    }
+    
+    .slider-right-arrow img{
+        margin-bottom: -3rem ;
+    }
+    .slider-pais{
+        flex: 1 0 30rem;
+    }
+
+    .box p{
+        text-align: left;
+    }
+    .reuniao-data, .reuniao-hora{
+        font-size: 1rem;
+    }
+}
+
+/* WIDTH LIMIT:816PX */
+
+@media(max-width: 51em){
+
+    html{
+        font-size: 90%;
+    }
+    .foco-main{
+        flex-direction: column;
+        align-items:initial;
+    }
+
+    .foco-main-block{
+        display: flex;
+    }
+
+    .foco-main-img{
+        /* width: 2rem; */
+        display: none;
+    }
+
+    .foco-main-block{
+        margin-bottom: 1rem;
+    }
+
+    .foco-main-block-text{
+        width: 100%;
+        justify-content: space-between ;
+        text-align: left;
+    }
+    
+    .foco-descr ul{
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 1fr;
+    }
+
+    .list-style img{
+        width: 3.5rem;
+    }
+
+    .container-foco hr{
+        display: block;
+    }
+
+    .container-foco h2{
+        margin-bottom: 0;
+        text-align: left;
+    }
+
+    .missão-slider-img img{
+        width: 14rem;
+        margin-bottom: -3rem;
+    }
+
+    .formulário form{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form-titulo h2{
+        text-align: left;
+        margin: 0;
+        padding-bottom: 0.5rem;
+        padding-left: 0;
+    } 
+    .rodapé{
+        flex-direction: column;
+        padding-bottom: 1rem;
+    }
+    .rodapé-contactos{
+        align-self: normal;
+    }
+    .rodapé-contactos-todos{
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .rodapé-info{
+        flex-direction: row;
+    }
+
+    .rodapé-logo p{
+        margin-bottom: 0.2rem;
+    }
+}
+
+/* WIDTH LIMIT:660PX */
+
+@media(max-width: 41.25em){
+    .missao-slider-content{
+        width: 25rem;
+    }
+
+    .missao-slider-logo{
+        justify-content:flex-start ;
+        
+    }
+
+    .missao-slider-logo, .slider-pais{
+        flex: 1 0 25rem;
+    }
+
+    .missão-info{
+        flex-direction:column;
+        gap: 0;
+    }
+
+    .missão-info-extra h3{
+        font-size: 2.8rem;
+    }
+}
+
+/* WIDTH LIMIT:596PX */
+
+@media(max-width: 37.25em){
+
+    .linguas-dropdown{
+        /* top: 3.7rem; */
+        right: 3.5rem;
+        font-size: 1.6rem;
+    }
+
+    .icon-mobile-nav{
+        margin-bottom: -0.5rem;
+    }
+    .missao-slider{
+        height: auto;
+        margin-top: 1rem ;
+        margin-bottom: 1rem ;
+    }
+    .missão-slider-img{
+        display: none;
+    }
+    .missao-slider-content{
+        width: 16.7rem;
+        height: auto;
+    }
+    .missao-slider-logo{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .missao-slider-logo, .slider-pais{
+        flex: 1 0 16.7rem;
+    }
+    .missão-info{
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .missão-info-extra h3{
+        font-size: 3.2rem;
+    }
+
+    #MissãoFrase{
+        margin-top: 2rem;
+        margin-bottom: 0rem;
+    }
+
+    .missao-slider{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    /* IMPLEMENTAÇÃO MOBILE NAV */
+
+    .btn-mobile-nav{
+        display: block;
+        z-index: 2;
+    }
+    
+    .main-nav{
+        background-color: rgba(15, 47, 64, 0.90);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+        transition: all 0.5s;
+        font-size: 2rem;
+    }
+
+    .dark-mode .main-nav{
+        background-color: hwb(0 100% 0% / 0.9);
+    }
+
+    .nav-open .main-nav{
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        z-index: 2;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    body.nav-open {
+        overflow: hidden;
+        height: 100vh;
+        position: fixed;
+        width: 100%;
+    }
+
+    .nav-open .icon-mobile-nav[name="close-outline"]{
+        display: block;
+    }
+    .nav-open .icon-mobile-nav[name="menu-outline"]{
+        display: none;
+    }
+
+    .main-nav .theme{
+        position:static;
+    }
+
+    .main-menu{
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* ------- */
+    
+
+
+    .rodapé-contactos-todos{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .form-solicit{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto,4);
+    }
+}
+
+/* WIDTH LIMIT:480PX */
+
+@media(max-width: 30em){
+    .sectionFrame{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .missao-slider{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .linguas-dropdown{
+        right: 2rem;
+    }
+
+}
+
+/* WIDTH LIMIT:436PX */
+
+@media(max-width: 27.25em){
+    .main-button{
+        width: 70%;
+        font-size: 1.5rem;
+    }
+    #MissãoFrase{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .slider-left-arrow img, .slider-right-arrow img{
+        width: 3.5rem;
+    }
+    .missao-slider-content{
+        width: 13rem;
+    }
+    .missao-slider{
+        padding-left: 2rem ;
+        padding-right: 2rem;
+    }
+
+    .slider-pais,.missao-slider-logo{
+        flex: 1 0 13rem;
+    }
+
+    .slider-pais img{
+        width: 13rem;
+        height: 5.2rem;
+    }
+
+    .slider-pais h2{
+        font-weight: 400;
+        font-size: 1.3rem ;
+    }
+
+
+}

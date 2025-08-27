@@ -1,30 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="customdesigns.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <title>PYRUS</title>
   </head>
   <body>
     <!-- SECÇÃO 1: MENU PRINCIPAL -->
-    <div class="secção">
-      <!-- NAVEGAÇÃO -->
-
-      <nav class="menu-linguas">
-        <div class="menu">
-          <a href="#">Início</a>
-          <a href="#missão">Missão</a>
-          <a href="#foco">Foco</a>
-          <a href="#form">Contacte-nos</a>
+    <div class="main">
+      <div class="main-menu">
+        <div class="linguas-dropdown">
+            <select>
+              <option value="0">PT</option>
+              <option value="1">PT</option>
+              <option value="2">EN</option>
+              <option value="3">ES</option>
+              <option value="4">RO</option>
+            </select>
         </div>
-        <!-- LINGUAS -->
-        <div class="linguas">
-          <a href="#">PT</a>
-          <a href="#">EN</a>
-          <a href="#">ES</a>
-        </div>
-      </nav>
+        <!-- NAVEGAÇÃO -->
+        <nav class="main-nav">
+            <a data-i18n="missao" href="#missao">Missão</a>
+            <a data-i18n="foco" href="#foco">Foco</a>
+            <a data-i18n="contacte" href="#form">Contacte-nos</a>
+        </nav>
+        <!-- <label for="theme" class="theme">
+          <span class="theme__toggle-wrap">
+            <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+            <span class="theme__icon">
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+            </span>
+          </span>
+        </label> -->
+        <button class="btn-mobile-nav " >
+          <img src="img/mobile/menu-outline_darkMode.svg" class="icon-mobile-nav" name="menu-outline">
+          <img src="img/mobile/close-outline_darkMode.svg" class="icon-mobile-nav" name="close-outline">
+        </button>
+      </div>
       <!-- LOGO + HEADLINES -->
       <div class="logotipo">
         <img
@@ -34,116 +60,149 @@
           width="200px"
         />
         <!-- <h1>Pyrus</h1> -->
-        <h2>
+        <h2 data-i18n="mainHeading1">
           Soluções <br />
           Imobiliárias
         </h2>
-        <h3>
+        <h3 data-i18n="mainHeading2">
           Personalizando o seu <br />
           investimento
         </h3>
-        <a href="#form"> Contacte-nos</a>
+        <button data-i18n="mainContacte" onclick="location.href='#form'" type="button" class="main-button"> Contacte-nos</button>
       </div>
+      <button onclick="location.href='#missao'" type="button" class="main-scroll-down-button">
+        <img class="main-scroll-down-button-whiteMode" src="img/Foco/Down Arrow.svg" alt="Scroll para baixo">
+      </button>
     </div>
 
     <!-- SECÇÃO 2: MISSÃO -->
-    <div id="missão" class="secção missão">
-      <div class="container-missão">
-        <!-- <p>text</p> -->
-        <div class="missão-texto">
-          <h2>Missão</h2>
+    <div id="missao" class="secção missao">
+        <div class="missão-texto sectionFrame">
+          <h2 data-i18n="missaoTitle">Missão</h2>
           <hr />
-          <h3>PYRUS - Imobiliário com Alcance Internacional</h3>
-          <p>
+          <h3 data-i18n="missaoSubTitle1">PYRUS - Imobiliário com Alcance Internacional</h3>
+          <p data-i18n="missaoSubTitle1Text">
             Com sólida experiência profissional e profundo conhecimento dos
-            mercados ibero-americanos e europeus, a Pyrus atua na identificação
+            mercados ibero-americanos e europeus, a PYRUS atua na identificação
             e desenvolvimento de oportunidades imobiliárias com alto potencial
             de valorização. Analisamos cada ativo com visão estratégica e
             multifatorial — viabilidade, aquisição, promoção, construção e
             comercialização — e entregamos soluções ajustadas a investidores,
             fundos e parceiros com ambição global.
           </p>
-          <h3>Equipa Experiente</h3>
-          <p>
+          <h3 data-i18n="missaoSubTitle2">Equipa Experiente</h3>
+          <p data-i18n="missaoSubTitle2Text">
             A equipa da PYRUS possui uma sólida experiência no mercado
             imobiliário, adquirida ao longo de anos de atuação em projetos de
             diferentes escalas e complexidades.
           </p>
-
-          <p id="MissãoFrase">
-            "Visão global, execução precisa. Transformamos ativos imobiliários
-            em valor real."
-          </p>
-        </div>
-        <div class="missão-slider-img-grid">
-          <div class="missão-slider-img">
-            <img src="img/Pyrus_logo_branco.png" alt="Logotipo da Pyrus" />
-            <h2>
-              Soluções <br />
-              Imobiliárias
-            </h2>
-          </div>
-          </div>
-          <div class="missão-info">
-            <div class="missão-info-extra">
-              <h3>40+</h3>
-              <p>
-                Anos de <br />
-                experiência
-              </p>
-            </div>
-          
-          <div class="missão-info-extra">
-            <h3>3</h3>
-            <p>Países</p>
-          </div>
-          </div>
-      
-    </div>
-
-
-    
-    <!-- SECÇÃO 3 - O NOSSO FOCO -->
-    <div id="foco" class="foco">
-      <div class="container-foco">
-        <h2>O Nosso Foco</h2>
-        <div class="foco-main">
-        <div class=" foco-main-block foco-main-1">
-          <img class="foco-main-img" src="img/Foco/foco-projeto-main.png" alt="Icon - Aquisição e Desenvolvimento de Projetos">
-          
-          <div class="foco-main-block-text">
-            <h3>Aquisição e Desenvolvimento de Projetos</h3>
-            <img src="img/Foco/Down Arrow.svg" alt="mais">
-          </div>
         </div>
        
-        <div class="foco-main-block foco-main-2">
-          <img class="foco-main-img" src="img/Foco/foco-transações-main.png" alt="Icon - Aquisição e Desenvolvimento de Projetos">
-          
-          <div class="foco-main-block-text">
-            <h3>Apoio em Negociações e Transações</h3>
-            <img src="img/Foco/Down Arrow.svg" alt="mais">
-          </div>
-        </div>
+        
+        <div class="missao-slider">
 
-        <div class=" foco-main-block foco-main-3">
-          <img class="foco-main-img" src="img/Foco/foco-investimentos-main.png" alt="Icon - Aquisição e Desenvolvimento de Projetos">
-          
-          <div class="foco-main-block-text">
-            <h3>Gestão Personalizada de Investimentos</h3>
-            <img src="img/Foco/Down Arrow.svg" alt="mais">
+          <button type="button" class="slider-left-arrow">
+            <img src="img/Foco/Down Arrow.svg" alt="Esquerda">
+          </button>
+
+          <div class="missao-slider-content">
+            <div class="missao-slider-content-inner">
+              <div class="missao-slider-logo" slider="1">
+                <div class="missão-slider-img">
+                  <img src="img/Pyrus_logo_branco.png" alt="Logotipo da Pyrus" />
+                  <h2 data-i18n="slider1logoTitle">
+                    Soluções <br />
+                    Imobiliárias
+                  </h2>
+                </div>
+                <div class="missão-info">
+                  <div class="missão-info-extra">
+                    <h3>40+</h3>
+                    <p data-i18n="slider1info1">
+                      Anos de <br />
+                      experiência
+                    </p>
+                  </div>
+                
+                  <div class="missão-info-extra">
+                    <h3>3</h3>
+                    <p data-i18n="slider1info2">Países</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="slider-pais" slider="2">
+                <h2 data-i18n="slider2title">Negócios Globais</h2>
+                <img src="img/missão_Braga.jpg" alt="Imagem do Bom Jesus, em Braga, Portugal" width="200px">
+                <p data-i18n="slider2local">Braga, <br> Portugal</p>
+              </div>
+
+              <div class="slider-pais" slider="3">
+                <h2 data-i18n="slider3title">Negócios Globais</h2>
+                <img src="img/missão_Rep_Dom.jpg" alt="Imagem da República Dominicana" width="200px">
+                <p data-i18n="slider3local">Santo Domingo, <br> República Dominicana</p>
+              </div>
+              
+              <div class="slider-pais" slider="4">
+                <h2 data-i18n="slider4title">Negócios Globais</h2>
+                <img src="img/missão_Bucarest.jpg" alt="Imagem de Bucareste, Roménia" width="200px">
+                <p data-i18n="slider4local">Bucareste, <br> Roménia</p>
+              </div>
+            </div>
           </div>
+          
+          <button type="button" class="slider-right-arrow">
+              <img src="img/Foco/Down Arrow.svg" alt="Direita">
+          </button>
+        </div>
+        <p data-i18n="missaoLema" class="sectionFrame" id="MissãoFrase">
+            "Visão global, execução precisa. Transformamos ativos imobiliários
+            em valor real."
+        </p>
+    </div>
+
+    <!-- SECÇÃO 3 - O NOSSO FOCO -->
+    <div id="foco" class="secção foco ">
+      <div class="container-foco sectionFrame">
+        <h2 data-i18n="focoTitle">O Nosso Foco</h2>
+        <hr />
+        <div class="foco-main">
+          <div class=" foco-main-block foco-main-1" data-foco="1">
+            <img class="foco-main-img" src="img/Foco/foco-projeto-main.png" alt="Icon - Aquisição e Desenvolvimento de Projetos">
+            
+            <div class="foco-main-block-text">
+              <h3 data-i18n="focoSub1">Aquisição e Desenvolvimento de Projetos</h3>
+              <img class="down-arrow" src="img/Foco/Down Arrow.svg" alt="mais">
+            </div>
+          </div>
+       
+          <div class="foco-main-block foco-main-2" data-foco="2">
+            <img class="foco-main-img" src="img/Foco/foco-transações-main.png" alt="Icon - Aquisição e Desenvolvimento de Projetos">
+            
+            <div class="foco-main-block-text">
+              <h3 data-i18n="focoSub2">Apoio em Negociações e Transações</h3>
+              <img class="down-arrow" src="img/Foco/Down Arrow.svg" alt="mais">
+            </div>
+          </div>
+
+          <div class=" foco-main-block foco-main-3" data-foco="3">
+            <img class="foco-main-img" src="img/Foco/foco-investimentos-main.png" alt="Icon - Aquisição e Desenvolvimento de Projetos">
+            
+            <div class="foco-main-block-text">
+              <h3 data-i18n="focoSub3">Gestão Personalizada de Investimentos</h3>
+              <img class="down-arrow" src="img/Foco/Down Arrow.svg" alt="mais">
+            </div>
         </div>
         </div>
       </div>
 
-      <div class="foco-descr foco-descr-projeto">
+      <div class="foco-descr foco-descr-1 sectionFrame" descr-foco="1">
         <ul>
           <li class="list-style">
-            <img src="img/Foco/foco-projeto-1.png" alt="logo1">
+            <img src="img/Foco/foco-projeto-1.png" alt="logo1" >
             <div>
-            <h4>Identificação de Oportunidades</h4>
-            <p>
+            <h4 data-i18n="focoSub1Title1">Identificação de Oportunidades</h4>
+            <p data-i18n="focoSub1Title1Text">
               Localização de imóveis e ativos com elevado potencial de
               valorização, reconversão ou desenvolvimento, alinhados com os
               objetivos do investidor.
@@ -151,20 +210,20 @@
             </div>
           </li>
           <li class="list-style">
-            <img src="img/Foco/foco-projeto-2.png" alt="logo2">
+            <img src="img/Foco/foco-projeto-2.png" alt="logo2" >
             <div>
-            <h4>Estudos de Viabilidade e Enquadramento</h4>
-            <p>
+            <h4 data-i18n="focoSub1Title2">Estudos de Viabilidade e Enquadramento</h4>
+            <p data-i18n="focoSub1Title2Text">
               Análise técnica, jurídica e financeira dos ativos, incluindo
               cenários de uso, licenciamento e retorno potencial.
             </p>
             </div>
           </li>
           <li class="list-style">
-            <img src="img/Foco/foco-projeto-3.png" alt="logo3">
+            <img src="img/Foco/foco-projeto-3.png" alt="logo3" >
             <div>
-            <h4>Estruturação do Projeto</h4>
-            <p>
+            <h4 data-i18n="focoSub1Title3">Estruturação do Projeto</h4>
+            <p data-i18n="focoSub1Title3Text">
               Definição do conceito, modelo de negócio e estratégia de
               desenvolvimento para cada ativo ou empreendimento.
             </p>
@@ -173,9 +232,8 @@
           <li class="list-style">
             <img src="img/Foco/foco-projeto-4.png" alt="logo4">
             <div>
-
-              <h4>Planeamento de Execução</h4>
-              <p>
+              <h4 data-i18n="focoSub1Title4">Planeamento de Execução</h4>
+              <p data-i18n="focoSub1Title4Text">
                 Organização das fases do projeto: aquisição, contratação de
                 equipas, orçamentos, cronogramas e estratégias de saída.
               </p>
@@ -184,14 +242,13 @@
         </ul>
       </div>
 
-      <div class="foco-descr foco-descr-transações">
-        
+      <div class="foco-descr foco-descr-2 sectionFrame" descr-foco="2">
         <ul>
           <li class="list-style">
             <img src="img/Foco/foco-transações-1.png" alt="logo1">
             <div>
-              <h4>Representação Estratégica</h4>
-              <p>
+              <h4 data-i18n="focoSub2Title1">Representação Estratégica</h4>
+              <p data-i18n="focoSub2Title1Text">
                 Atuação em nome de investidores ou proprietários para defender
                 interesses em transações imobiliárias ou empresariais.
               </p>
@@ -200,9 +257,8 @@
           <li class="list-style">
             <img src="img/Foco/foco-transações-2.png" alt="logo2">
             <div>
-
-              <h4>Preparação de Ativos para Transação</h4>
-              <p>
+              <h4 data-i18n="focoSub2Title2">Preparação de Ativos para Transação</h4>
+              <p data-i18n="focoSub2Title2Text">
                 Análise técnica, jurídica e financeira dos ativos, incluindo
                 cenários de uso, licenciamento e retorno potencial.
               </p>
@@ -211,20 +267,18 @@
           <li class="list-style">
             <img src="img/Foco/foco-transações-3.png" alt="logo3">
             <div>
-              <h4>Intermediação Técnica</h4>
-              <p>
+              <h4 data-i18n="focoSub2Title3">Intermediação Técnica</h4>
+              <p data-i18n="focoSub2Title3Text">
                 Suporte especializado em negociações complexas envolvendo ativos
                 com particularidades legais ou operacionais.
               </p>
             </div>
-              
           </li>
           <li class="list-style">
             <img src="img/Foco/foco-transações-4.png" alt="logo4">
             <div>
-
-              <h4>Coordenação de Due Diligence</h4>
-              <p>
+              <h4 data-i18n="focoSub2Title4">Coordenação de Due Diligence</h4>
+              <p data-i18n="focoSub2Title4Text">
                 Gestão de processos de análise técnica, jurídica e financeira para
                 garantir decisões informadas e seguras.
               </p>
@@ -233,15 +287,13 @@
         </ul>
       </div>
 
-      <div class="foco-descr foco-descr-investimentos">
-        
+      <div class="foco-descr foco-descr-3 sectionFrame" descr-foco="3">
         <ul>
           <li class="list-style">
             <img src="img/Foco/foco-investimentos-1.png" alt="logo1">
             <div>
-
-              <h4>Modelos de Investimento à Medida</h4>
-              <p>
+              <h4 data-i18n="focoSub3Title1">Modelos de Investimento à Medida</h4>
+              <p data-i18n="focoSub3Title1Text">
                 Estratégias desenhadas segundo o perfil e os objetivos de cada
                 investidor, com acompanhamento próximo.
               </p>
@@ -250,9 +302,8 @@
           <li class="list-style">
             <img src="img/Foco/foco-investimentos-2.png" alt="logo2">
             <div>
-
-              <h4>Gestão de Portfólio Imobiliário</h4>
-              <p>
+              <h4 data-i18n="focoSub3Title2">Gestão de Portfólio Imobiliário</h4>
+              <p data-i18n="focoSub3Title2Text">
                 Acompanhamento contínuo de ativos e projetos, com relatórios de
                 progresso e apoio na tomada de decisão.
               </p>
@@ -261,9 +312,8 @@
           <li class="list-style">
             <img src="img/Foco/foco-investimentos-3.png" alt="logo3">
             <div>
-
-              <h4>Monitorização de Mercados</h4>
-              <p>
+              <h4 data-i18n="focoSub3Title3">Monitorização de Mercados</h4>
+              <p data-i18n="focoSub3Title3Text">
                 Atualização constante sobre tendências e contextos relevantes a
                 nível local e internacional.
               </p>
@@ -272,9 +322,8 @@
           <li class="list-style">
             <img src="img/Foco/foco-investimentos-4.png" alt="logo4">
             <div>
-
-              <h4>Suporte Contínuo e Confidencialidade</h4>
-              <p>
+              <h4 data-i18n="focoSub3Title4">Suporte Contínuo e Confidencialidade</h4>
+              <p data-i18n="focoSub3Title4Text">
                 Relação próxima e estratégica com cada cliente, garantindo
                 discrição e alinhamento de longo prazo.
               </p>
@@ -285,27 +334,185 @@
     </div>
 
     <!-- FORMULÁRIO -->
-    <div id="form" class="SECÇÃO">
-      <h3>Contacte-nos</h3>
-      <h4>Faça uma solicitação</h4>
+    <div id="form" class="secção formulário">
+      <div class="form-titulo sectionFrame">
+        <h2 data-i18n="formTitle">Faça Uma Solicitação</h2>
+      </div>     
+      <form class="sectionFrame" id="contact-form" action="http://localhost:3000/send-email" method="POST">
+          <div class="form_esquerdo">
+            <label class="box-title" for="solicitação" data-i18n="formSolicit">Tipo de Solicitação:</label>
+            <div class="form-solicit form-input">
+              <div class="box">
+                <label class="custom-checkbox">
+                  <input type="checkbox" id="solicitação" name="vender-imóvel" value="1">
+                  <span class="checkmark"></span>
+                </label>
+                  <p data-i18n="formSolicitOpt1">Quero vender um imóvel</p>
+              </div>            
+              <div class="box">
+                <label class="custom-checkbox">
+                  <input type="checkbox" id="solicitação" name="parceiro-projeto" value="2" >
+                  <span class="checkmark"></span>
+                </label>
+                <p data-i18n="formSolicitOpt2">Procuro um parceiro para um projeto</p>
+              </div>            
+              <div class="box">
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="solicitação" name="comprar-imóvel" value="3">
+                    <span class="checkmark"></span>
+                  </label>
+                <p data-i18n="formSolicitOpt3">Quero comprar um imóvel</p>
+              </div>
+              <div class="box">
+                <label class="custom-checkbox">
+                  <input type="checkbox" id="solicitação" name="outro" value="4" >
+                  <span class="checkmark"></span>
+                </label>
+                <p data-i18n="formSolicitOpt4">Outro</p> 
+                <input type="text" id="outro" data-i18n-placeholder="formSolicitOpt4Box" placeholder="Introduza texto">
+              </div>
+            </div>
+            <div class="form-input">
+                <label class="box-title" for="assunto" data-i18n="formAssunto" >Assunto:</label>
+                <input type="text" class="input-texto" id="assunto" name="assunto" data-i18n-placeholder="formAssuntoBox" placeholder="Insira aqui o seu texto" required>
+            </div>
+            <div class="form-input">
+                <label class="box-title" for="descrição" data-i18n="formDescrpt">Descrição:</label>
+                <textarea class="input-texto-descr" id="descrição" name="assunto" data-i18n-placeholder="formDescrpt" placeholder="Insira aqui o seu texto" rows=11 cols=50 maxlength="99999" wrap="soft" required> </textarea>
+            </div>
+            <div class="form-input form-contacto-check">
+              <label class="switch">
+                <input type="checkbox" id="contacto" name="contacto" >
+                <span class="slider"></span>
+              </label>
+              <label for="contacto" data-i18n="formContactoCheck"> Marcação de Contacto (opcional)</label>
+            </div>
+            <div class="reuniao">
+              <div class="form-input">
+                  <label class="box-title reuniao-data" for="reunião-data" data-i18n="formContactoData"> Sugestão de Data para reunião/visita</label>
+                  <input class="input-texto" type="date" id="reunião-data" name="reunião-data">
+              </div>
+              <div class="form-input">
+                  <label class="box-title reuniao-hor" for="reunião-hora" data-i18n="formContactoHora"> Hora</label>
+                  <input class="input-texto" type="time" id="reunião-hora" name="reunião-hora">
+              </div>
+            </div>
+          </div>
+          <div class="form_direito">
+            <div class="form-input">
+                <label class="box-title" for="nome" data-i18n="formNome">Nome:</label>
+                <input class="input-texto" type="text" id="nome" name="nome" data-i18n-placeholder="formNomeBox" placeholder="Nome" required>
+            </div>
+            <div class="form-input">
+                <label class="box-title" for="telemóvel" data-i18n="formTel">Telemóvel:</label>
+                <input class="input-texto" type="number" id="telemóvel" name="telemóvel" data-i18n-placeholder="formTelBox" placeholder="Telemóvel" required>
+            </div>
+            <div class="form-input">
+                <label class="box-title" for="email" data-i18n="formEmail">E-mail:</label>
+                <input class="input-texto" type="email" id="email" name="email" data-i18n-placeholder="formEmailBox" placeholder="Email" required>
+            </div>
+            <div class="form-input contacto-preferência ">
+                <label class="box-title" for="contacto-preferência" data-i18n="formContactoPref">Deseja ser contactado por:</label>
+                <select name="contacto-preferência" id="contacto-preferência">
+                    <option value="email" data-i18n="formContactoPref1" >E-mail</option>
+                    <option value="telemóvel" data-i18n="formContactoPref2">Telemóvel</option>
+                    <option value="WhatsApp" data-i18n="formContactoPref3">WhatsApp</option>
+                </select>
+            </div>
+            <div class="form-input RGPD">
+              <label class="custom-checkbox">
+                <input type="checkbox" id="RGPD" name="RGPD" required>
+                <span class="checkmark"></span>
+              </label>
+                
+              <label for="contacto"> 
+                <p data-i18n="formRGPD">Autorizo a recolha e o tratamento dos meus dados pessoais para os fins indicados, em conformidade
+                    com o Regulamento Geral sobre a Proteção de Dados (RGPD).
+                </p>
+            </div>
+            <div>
+                <input class="form-submit" type="submit"  value="Submeter Pedido" />
+            </div>
+          </div>
+        </form>
+
     </div>
 
 
-
     <!-- RODAPÉ -->
-    <div class="rodapé">
+    <div id="rodape" class="rodapé sectionFrame">
       <div class="rodapé-contactos">
-        <h4>Contactos</h4>
-        <p>Rua Bernardo Sequeira 213 <br>4715-671 Braga, Portugal</p>
-        <p>+351253897123 <br>Chamada para a rede fixa nacional</p>
-        <p>pyrus@pyrus.pt</p>
+        <h4 data-i18n="rodapeContactos">Contactos</h4>
+        <div class="rodapé-contactos-todos">
+            <div class="contactos-morada">
+            <h5 data-i18n="rodapeContactosMorada">Morada:</h5>
+            <p data-i18n="rodapeContactosMorada1">Rua Bernardo Sequeira 213 <br> 4715-671 Braga, Portugal</p>
+            </div>
+            <div class="contactos-telefone">
+            <h5 data-i18n="rodapeContactosTel">Telefone:</h5>
+            <p data-i18n="rodapeContactosTel1">+351253897123</p>
+            <p data-i18n="rodapeContactosTel2">Chamada para a rede fixa nacional</p>
+            </div>
+            <div class="contactos-email">
+            <h5 data-i18n="rodapeContactosEmail">E-mail:</h5>
+            <a href="mailto:pyrus@pyrus.pt">pyrus@pyrus.pt</a>
+            </div>
+        </div>
       </div>
-      <a href="#"> Política de Privacidade</a>
-      <a href="#"> Cookies</a>
-      <div class="rodapé-logo">
-        <img src="img/Pyrus_logo_branco.png" alt="Logo da Pyrus" width="200px">
-        <p>© Pyrus 2025</p>
+      <div  class="rodapé-info">
+        <a data-i18n="rodapePrivacidade"  id="openPrivacidade">Política de Privacidade</a>
+        <div class="rodapé-logo">
+          <img src="img/Pyrus_logo_branco.png" alt="Logo da Pyrus" width="200px">
+          <p>© Pyrus 2025</p>
+          <p class="labelADVIR">Powered by ADVIR</p>
+        </div>
       </div>
-      </div>
+    </div>
+    <!-- POLÍTICA DE PRIVACIDADE -->
+    <div class="privacidade sectionFrame">
+        <div class="privacidade-titulo">
+        <h3 data-i18n="privacidadeTitulo">Política de Privacidade</h3>
+        <img src="img/mobile/close-outline_darkMode.svg" class="icon-mobile-nav" name="priv-close-outline">
+        </div>  
+        <p data-i18n="privacidadeText1"> A PYRUS compromete-se a proteger a privacidade e segurança dos dados pessoais, em conformidade com o Regulamento Geral sobre a Proteção de Dados (RGPD) e a legislação nacional aplicável.</p>
+        <h4 data-i18n="privacidadeSub1">(1) Dados Recolhidos e Finalidade</h4>
+        <p data-i18n="privacidadeSub1Text1">Identificação e Contactos: Nome, email, telefone, cargo e empresa. </p>
+        <p data-i18n="privacidadeSub1Text2">Dados de Navegação: Cookies, endereço IP, dispositivo e preferências.</p>
+        <p data-i18n="privacidadeSub1Text3">Os dados são utilizados para:</p>
+        <ul>
+          <li data-i18n="privacidadeSub1List1">Prestação de serviços e suporte;</li>
+          <li data-i18n="privacidadeSub1List2">Comunicação e envio de informações;</li>
+          <li data-i18n="privacidadeSub1List3">Cumprimento de obrigações legais;</li>
+          <li data-i18n="privacidadeSub1List4">Melhoramento da experiência no website.</li>
+        </ul>
+        <h4 data-i18n="privacidadeSub2">(2) Partilha de Dados</h4>
+        <p data-i18n="privacidadeSub2Text1">Não vendemos nem comercializamos dados pessoais. Poderemos partilhar com:</p>
+        <ul>
+          <li data-i18n="privacidadeSub2List1">Subcontratantes que garantam conformidade com o RGPD;</li>
+          <li data-i18n="privacidadeSub2List2">Autoridades legais, quando exigido.</li>
+        </ul>
+        <h4 data-i18n="privacidadeSub3">(3) Segurança e Retenção de Dados</h4>
+        <p data-i18n="privacidadeSub3Text1">Implementamos medidas técnicas e organizacionais para proteger os dados contra acessos indevidos, incluindo encriptação, firewalls e controlo de acessos. Os dados são mantidos apenas pelo período necessário ao cumprimento das finalidades legais e contratuais.</p>
+        <h4 data-i18n="privacidadeSub4">(4) Direitos dos Titulares</h4>
+        <p data-i18n="privacidadeSub4Text1">Nos termos do RGPD, pode:</p>
+        <ul>
+          <li data-i18n="privacidadeSub4List1">Aceder, retificar ou apagar os seus dados;</li>
+          <li data-i18n="privacidadeSub4List2">Opor-se ao tratamento ou solicitar limitação;</li>
+          <li data-i18n="privacidadeSub4List3">Solicitar a portabilidade dos dados.</li>
+        </ul>
+        <p data-i18n="privacidadeSub4Text2">Para exercer os seus direitos, contacte-nos: pyrus@pyrus.pt .</p>
+        <h4 data-i18n="privacidadeSub5">(5) Cookies</h4>
+        <p data-i18n="privacidadeSub5Text1">Utilizamos cookies para melhorar a experiência no website. Pode configurar as suas preferências no navegador.</p>
+        <h4 data-i18n="privacidadeSub6">(6) Alterações e Contacto</h4>
+        <p data-i18n="privacidadeSub6Text1">Esta política pode ser atualizada. Para mais informações, contacte-nos:</p>
+        <ul>
+          <li data-i18n="privacidadeSub6List1">Email: pyrus@pyrus.pt</li>
+          <li data-i18n="privacidadeSub6List2">Morada: Rua Bernardo Sequeira, nº 231, Sala 3 4715-010 Braga, Portugal</li>
+          <li data-i18n="privacidadeSub6List3">Telefone: +351 253 176 493</li>
+        </ul>
+        <h5 data-i18n="privacidadeSign">Agosto de 2025 | A Administração</h5>
+
+      <script src="index.js"></script>
+      <script src="translations.js"></script>
   </body>
 </html>

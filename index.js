@@ -1,3 +1,27 @@
+// Troca o favicon consoante o modo (dark ou light)
+function applyFavicon() {
+  const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  let favicon = document.querySelector("link[rel='icon']");
+
+  if (!favicon) {
+    favicon = document.createElement("link");
+    favicon.rel = "icon";
+    favicon.type = "image/png";
+    document.head.appendChild(favicon);
+  }
+
+  favicon.href = isDarkMode ? "img/Pyrus_favicon_darkMode.png" : "img/Pyrus_favicon_whiteMode.png";
+}
+
+// Corre na carga inicial
+applyFavicon();
+
+// Atualiza se o utilizador mudar o tema do sistema
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", applyFavicon);
+
+// Atualiza se o utilizador mudar o tema do sistema
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", applyDarkModeImages);
+
 document.addEventListener("DOMContentLoaded", function() {
   const mainBlocks = document.querySelectorAll(".foco-main-block");
   const descriptions = document.querySelectorAll(".foco-descr");

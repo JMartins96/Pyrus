@@ -242,6 +242,7 @@ const translations = {
     formContactoPref3: "WhatsApp",
     formRGPD:
       "Autorizo a recolha e o tratamento dos meus dados pessoais para os fins indicados, em conformidade com o RGPD.",
+    formSubmit: "Submeter Pedido",
 
     // RODAPÉ
     rodapeContactos: "Contactos",
@@ -401,7 +402,7 @@ const translations = {
     formContactoPref3: "WhatsApp",
     formRGPD:
       "I authorize the collection and processing of my personal data for the indicated purposes, in accordance with GDPR.",
-
+    formSubmit: "Submit Request",
     // FOOTER
     rodapeContactos: "Contacts",
     rodapeContactosMorada: "Address:",
@@ -554,7 +555,8 @@ const translations = {
     formContactoPref3: "WhatsApp",
     formRGPD:
       "Autorizo la recolección y el tratamiento de mis datos personales para los fines indicados, en conformidad con el RGPD.",
-
+    formSubmit: "Enviar Solicitud",
+    
     // PIE DE PÁGINA
     rodapeContactos: "Contactos",
     rodapeContactosMorada: "Dirección:",

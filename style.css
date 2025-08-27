@@ -38,7 +38,6 @@ p{
     font-weight: 300;
     text-align: justify;
     text-justify: inter-word;
-    margin-bottom: 1rem;
 }
 
 a:link{
@@ -143,6 +142,7 @@ a:hover{
 .main-scroll-down-button{
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .main-scroll-down-button-darkMode{
@@ -166,6 +166,7 @@ a:hover{
 /* CUSTOM DROPDOWN LINGUAS */
 
 .linguas-dropdown{
+    cursor: pointer;
     position: absolute;
     right: 5rem;
     width: 4rem;
@@ -356,6 +357,10 @@ a:hover{
     margin-bottom: 18px;
 }
 
+.missão-texto p{
+    margin-bottom: 1rem;
+}
+
 hr{
     margin-top: 0;
     margin-bottom: 2.2rem;
@@ -473,6 +478,7 @@ hr{
 .slider-left-arrow, .slider-right-arrow{
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .slider-left-arrow{
@@ -504,6 +510,7 @@ hr{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .foco-main-img{
@@ -708,16 +715,21 @@ input::placeholder{
     font-size: inherit;
 }
 
-input[type=submit] {
+.form-submit{
     font-size: inherit;
     background:#154157; 
-    color: white;
+    
     border:0 none;
     cursor:pointer;
     -webkit-border-radius: 5px;
     border-radius: 2px; 
     width: 100%;
     height: 2.6rem;
+}
+
+.form-submit p{
+    text-align: center;
+    color: #f7f7f7;
 }
 
 input[type=text], input[type=email], input[type=number], select{
@@ -792,7 +804,7 @@ input[type=text], input[type=email], input[type=number] {
 
 .custom-checkbox:hover .checkmark {
   border-color: #666;
-  background-color: #f0f0f0;
+  background-color: rgb(240, 240, 240);
   transform: scale(1.05);
 }
 

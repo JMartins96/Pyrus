@@ -556,7 +556,7 @@ const translations = {
     formRGPD:
       "Autorizo la recolección y el tratamiento de mis datos personales para los fines indicados, en conformidad con el RGPD.",
     formSubmit: "Enviar Solicitud",
-    
+
     // PIE DE PÁGINA
     rodapeContactos: "Contactos",
     rodapeContactosMorada: "Dirección:",
@@ -714,7 +714,7 @@ const translations = {
     formContactoPref3: "WhatsApp",
     formRGPD:
       "Autorizez colectarea și prelucrarea datelor mele personale în scopurile indicate, în conformitate cu RGPD.",
-
+    formSubmit: "Trimiteți cererea",
     // FOOTER
     rodapeContactos: "Contacte",
     rodapeContactosMorada: "Adresă:",

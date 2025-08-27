@@ -19,9 +19,6 @@ applyFavicon();
 // Atualiza se o utilizador mudar o tema do sistema
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", applyFavicon);
 
-// Atualiza se o utilizador mudar o tema do sistema
-window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", applyDarkModeImages);
-
 document.addEventListener("DOMContentLoaded", function() {
   const mainBlocks = document.querySelectorAll(".foco-main-block");
   const descriptions = document.querySelectorAll(".foco-descr");

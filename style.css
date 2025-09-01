@@ -14,7 +14,7 @@ body{
     color:#f7f7f7;
     font-family: "Open Sans", sans-serif;
     position: relative;
-    background-image: url("img/homepageIdea_Pyrus_background.png");
+    background-image: url("img/Pyrus_background.webp");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -54,6 +54,39 @@ a:hover{
     text-decoration: underline;
 }
 
+/* PRELOADER */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #154157;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* always on top */
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+
+.preloader.fade-out{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.preloader-logo{
+    width: 15rem;
+    /* height: 12rem; */
+    z-index: 99;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
 .secção{
     width: 100vw;  /* 100% of the viewport width */
     padding-top: 3rem;
@@ -571,6 +604,8 @@ hr{
 
 .list-style h4{
     font-size: 1.2rem;
+    text-align: left;
+    margin-bottom: 0;
 }
 
 .container-foco hr{
@@ -824,7 +859,7 @@ input[type=text], input[type=email], input[type=number] {
 /* From Uiverse.io by gharsh11032000 */ 
 /* The switch - the box around the slider */
 .switch {
-  font-size: 14px;
+  font-size: 0.875rem;
   position: relative;
   display: inline-block;
   width: 3.5em;
@@ -843,8 +878,8 @@ input[type=text], input[type=email], input[type=number] {
   position: absolute;
   cursor: pointer;
   inset: 0;
-  border: 2px solid #154157;
-  border-radius: 50px;
+  border: 0.125rem solid #154157;
+  border-radius: 3.125rem;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 

@@ -136,6 +136,48 @@ btnNavEl.addEventListener('click', function(){
   body.classList.toggle("nav-open");
 })
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const mediaQuery = window.matchMedia("(max-width: 51em)"); // mobile breakpoint
+  const focoBlocks = document.querySelectorAll(".foco-main-block");
+  const focoDescrs = document.querySelectorAll(".foco-descr");
+
+  // Create placeholders to remember original positions
+  const placeholders = new Map();
+  focoDescrs.forEach(descr => {
+    const placeholder = document.createComment("placeholder for " + descr.className);
+    descr.parentNode.insertBefore(placeholder, descr);
+    placeholders.set(descr, placeholder);
+  });
+
+  function moveDescrs(e) {
+    if (e.matches) {
+      // Mobile: move each descr after its block
+      focoBlocks.forEach(block => {
+        const focoNumber = block.dataset.foco;
+        const descr = document.querySelector(`.foco-descr-${focoNumber}`);
+        if (descr && descr.previousElementSibling !== block) {
+          block.insertAdjacentElement("afterend", descr);
+        }
+      });
+    } else {
+      // Desktop: move them back to original position using placeholders
+      focoDescrs.forEach(descr => {
+        const placeholder = placeholders.get(descr);
+        if (placeholder && placeholder.parentNode) {
+          placeholder.parentNode.insertBefore(descr, placeholder.nextSibling);
+        }
+      });
+    }
+  }
+
+  // Run once on load
+  moveDescrs(mediaQuery);
+
+  // Auto-refresh on resize
+  mediaQuery.addEventListener("change", moveDescrs);
+});
+
 // Remove nav-open class when a nav link is clicked
 document.querySelectorAll(".main-nav a").forEach(link => {
   link.addEventListener("click", () => {
@@ -187,4 +229,15 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("❌ Falha na ligação ao servidor.");
     }
   });
+});
+
+// Preloader fade out when page is fully loaded
+window.addEventListener("load", () => {
+  const preloader = document.querySelector(".preloader");
+  preloader.classList.add("fade-out");
+
+  // remove preloader from DOM after fade
+  setTimeout(() => {
+    preloader.remove();
+  }, 800); // match the CSS transition time
 });

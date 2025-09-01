@@ -248,7 +248,7 @@ const translations = {
     rodapeContactos: "Contactos",
     rodapeContactosMorada: "Morada:",
     rodapeContactosMorada1:
-      "Rua Bernardo Sequeira 213 <br> 4715-671 Braga, Portugal",
+      "Rua Bernardo Sequeira 231, 1º sala 3, <br> 4715-010 Braga, Portugal",
     rodapeContactosTel: "Telefone:",
     rodapeContactosTel1: "+351253897123",
     rodapeContactosTel2: "Chamada para a rede fixa nacional",
@@ -293,7 +293,7 @@ const translations = {
       "Esta política pode ser atualizada. Para mais informações, contacte-nos:",
     privacidadeSub6List1: "Email: pyrus@pyrus.pt",
     privacidadeSub6List2:
-      "Morada: Rua Bernardo Sequeira, nº 231, Sala 3 4715-010 Braga, Portugal",
+      "Morada: Rua Bernardo Sequeira 231, 1º Sala 3 4715-010 Braga, Portugal",
     privacidadeSub6List3: "Telefone: +351 253 176 493",
     privacidadeSign: "Agosto de 2025 | A Administração",
   },
@@ -407,7 +407,7 @@ const translations = {
     rodapeContactos: "Contacts",
     rodapeContactosMorada: "Address:",
     rodapeContactosMorada1:
-      "Rua Bernardo Sequeira 213 <br> 4715-671 Braga, Portugal",
+      "Rua Bernardo Sequeira 231, 1º sala 3, <br> 4715-010 Braga, Portugal",
     rodapeContactosTel: "Phone:",
     rodapeContactosTel1: "+351253897123",
     rodapeContactosTel2: "Call to national landline",
@@ -446,7 +446,7 @@ const translations = {
     privacidadeSub6Text1: "This policy may be updated. For more information, contact us:",
     privacidadeSub6List1: "Email: pyrus@pyrus.pt",
     privacidadeSub6List2:
-      "Address: Rua Bernardo Sequeira, nº 231, Sala 3 4715-010 Braga, Portugal",
+      "Address: Rua Bernardo Sequeira 231, 1º Sala 3, 4715-010 Braga, Portugal",
     privacidadeSub6List3: "Phone: +351 253 176 493",
     privacidadeSign: "August 2025 | The Administration",
   },
@@ -561,7 +561,7 @@ const translations = {
     rodapeContactos: "Contactos",
     rodapeContactosMorada: "Dirección:",
     rodapeContactosMorada1:
-      "Rua Bernardo Sequeira 213 <br> 4715-671 Braga, Portugal",
+      "Rua Bernardo Sequeira 231, 1º sala 3, <br> 4715-010 Braga, Portugal",
     rodapeContactosTel: "Teléfono:",
     rodapeContactosTel1: "+351253897123",
     rodapeContactosTel2: "Llamada a la red fija nacional",
@@ -606,7 +606,7 @@ const translations = {
       "Esta política puede actualizarse. Para más información, contáctenos:",
     privacidadeSub6List1: "Correo: pyrus@pyrus.pt",
     privacidadeSub6List2:
-      "Dirección: Rua Bernardo Sequeira, nº 231, Sala 3 4715-010 Braga, Portugal",
+      "Dirección: Rua Bernardo Sequeira 231, 1º Sala 3 4715-010 Braga, Portugal",
     privacidadeSub6List3: "Teléfono: +351 253 176 493",
     privacidadeSign: "Agosto de 2025 | La Administración",
   },
@@ -719,7 +719,7 @@ const translations = {
     rodapeContactos: "Contacte",
     rodapeContactosMorada: "Adresă:",
     rodapeContactosMorada1:
-      "Rua Bernardo Sequeira 213 <br> 4715-671 Braga, Portugalia",
+      "Rua Bernardo Sequeira 231, 1º sala 3, <br> 4715-010 Braga, Portugalia",
     rodapeContactosTel: "Telefon:",
     rodapeContactosTel1: "+351253897123",
     rodapeContactosTel2: "Apel către rețeaua națională fixă",
@@ -758,7 +758,7 @@ const translations = {
     privacidadeSub6Text1: "Această politică poate fi actualizată. Pentru mai multe informații, contactați-ne:",
     privacidadeSub6List1: "E-mail: pyrus@pyrus.pt",
     privacidadeSub6List2:
-      "Adresă: Rua Bernardo Sequeira, nr. 231, Sala 3 4715-010 Braga, Portugalia",
+      "Adresă: Rua Bernardo Sequeira 231, 1º Sala 3, 4715-010 Braga, Portugalia",
     privacidadeSub6List3: "Telefon: +351 253 176 493",
     privacidadeSign: "August 2025 | Administrația",
   },

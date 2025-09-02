@@ -199,6 +199,18 @@ btnClosePrivacidade.addEventListener('click', function(){
   body.classList.toggle("open-privacidade");
 })
 
+// Ativa e desativa escrita em "outro" no formulário
+document.addEventListener("DOMContentLoaded", () => {
+  const outroCheckbox = document.querySelector("input[name='outro']");
+  const outroInput = document.getElementById("outro");
+
+  outroCheckbox.addEventListener("change", () => {
+    outroInput.disabled = !outroCheckbox.checked;
+    if (!outroCheckbox.checked) {
+      outroInput.value = ""; // limpa se desmarcar
+    }
+  });
+});
 
 // Form submission confirmation
 

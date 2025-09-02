@@ -26,6 +26,10 @@
     <title>PYRUS</title>
   </head>
   <body>
+    <!-- PRELOADER -->
+    <div class="preloader">
+      <img src="img/Pyrus_logo_branco.png" alt="PYRUS Logo" class="preloader-logo" />
+    </div>
     <!-- SECÇÃO 1: MENU PRINCIPAL -->
     <div class="main">
       <div class="main-menu">
@@ -341,26 +345,44 @@
             <label class="box-title" for="solicitação" data-i18n="formSolicit">Tipo de Solicitação:</label>
             <div class="form-solicit form-input">
               <div class="box">
-                <label class="custom-checkbox">
-                  <input type="checkbox" id="solicitação" name="vender-imóvel" value="1">
-                  <span class="checkmark"></span>
-                </label>
-                  <p data-i18n="formSolicitOpt1">Quero vender um imóvel</p>
-              </div>            
-              <div class="box">
-                <label class="custom-checkbox">
-                  <input type="checkbox" id="solicitação" name="parceiro-projeto" value="2" >
-                  <span class="checkmark"></span>
-                </label>
-                <p data-i18n="formSolicitOpt2">Procuro um parceiro para um projeto</p>
-              </div>            
-              <div class="box">
-                <label class="custom-checkbox">
-                    <input type="checkbox" id="solicitação" name="comprar-imóvel" value="3">
-                    <span class="checkmark"></span>
-                  </label>
-                <p data-i18n="formSolicitOpt3">Quero comprar um imóvel</p>
-              </div>
+              <label class="custom-checkbox">
+                <input
+                  type="checkbox"
+                  id="solicitação"
+                  name="vender-comprar"
+                  value="1"
+                />
+                <span class="checkmark"></span>
+              </label>
+              <p data-i18n="formSolicitOpt1">Quero vender/comprar</p>
+            </div>
+
+            <div class="box">
+              <label class="custom-checkbox">
+                <input
+                  type="checkbox"
+                  id="solicitação"
+                  name="parceiro-projeto"
+                  value="2"
+                />
+                <span class="checkmark"></span>
+              </label>
+              <p data-i18n="formSolicitOpt2">Procuro parceria</p>
+            </div>
+
+            <div class="box">
+              <label class="custom-checkbox">
+                <input
+                  type="checkbox"
+                  id="solicitação"
+                  name="valorizar"
+                  value="3"
+                />
+                <span class="checkmark"></span>
+              </label>
+              <p data-i18n="formSolicitOpt3">Quero valorizar</p>
+            </div>
+ 
               <div class="box">
                 <label class="custom-checkbox">
                   <input type="checkbox" id="solicitação" id="outro-checkbox" name="outro" value="4" >

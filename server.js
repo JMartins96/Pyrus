@@ -51,7 +51,7 @@ app.post("/api/send-email", async (req, res) => {
 
   const mailOptions = {
     from: user,
-    to: "pyrus@pyrus.pt",
+    to: "jlmartins@pyrus.pt",
     subject: `Nova Solicitação: ${formData.assunto||"(sem assunto)"}`,
     text:
     `Nome: ${formData.nome || ""}

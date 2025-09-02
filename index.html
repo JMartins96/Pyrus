@@ -336,7 +336,7 @@
       <div class="form-titulo sectionFrame">
         <h2 data-i18n="formTitle">Faça Uma Solicitação</h2>
       </div>     
-      <form class="sectionFrame" id="contact-form" action="http://localhost:3000/send-email" method="POST">
+      <form class="sectionFrame" id="contact-form" action="http://51.254.116.237:8082/send-email" method="POST">
           <div class="form_esquerdo">
             <label class="box-title" for="solicitação" data-i18n="formSolicit">Tipo de Solicitação:</label>
             <div class="form-solicit form-input">
@@ -363,11 +363,11 @@
               </div>
               <div class="box">
                 <label class="custom-checkbox">
-                  <input type="checkbox" id="solicitação" name="outro" value="4" >
+                  <input type="checkbox" id="solicitação" id="outro-checkbox" name="outro" value="4" >
                   <span class="checkmark"></span>
                 </label>
                 <p data-i18n="formSolicitOpt4">Outro</p> 
-                <input type="text" id="outro" data-i18n-placeholder="formSolicitOpt4Box" placeholder="Introduza texto" disabled>
+                <input type="text" id="outro" name="outro-texto" data-i18n-placeholder="formSolicitOpt4Box" placeholder="Introduza texto" disabled>
               </div>
             </div>
             <div class="form-input">
@@ -403,7 +403,7 @@
             </div>
             <div class="form-input">
                 <label class="box-title" for="telemóvel" data-i18n="formTel">Telemóvel:</label>
-                <input class="input-texto" type="number" id="telemóvel" name="telemóvel" data-i18n-placeholder="formTelBox" placeholder="Telemóvel" required>
+                <input class="input-texto" type="tel" id="telemóvel" name="telemóvel" data-i18n-placeholder="formTelBox" placeholder="Telemóvel" pattern="^\+?[0-9\s]*$" required>
             </div>
             <div class="form-input">
                 <label class="box-title" for="email" data-i18n="formEmail">E-mail:</label>
@@ -422,11 +422,10 @@
                 <input type="checkbox" id="RGPD" name="RGPD" required>
                 <span class="checkmark"></span>
               </label>
-                
-              <label for="contacto"> 
+              <label for="RGPD" class="rgpd-text">
                 <p data-i18n="formRGPD">Autorizo a recolha e o tratamento dos meus dados pessoais para os fins indicados, em conformidade
-                    com o Regulamento Geral sobre a Proteção de Dados (RGPD).
-                </p>
+                com o Regulamento Geral sobre a Proteção de Dados (RGPD).</p>
+              </label>
             </div>
             <div>
                 <button class="form-submit" type="submit">

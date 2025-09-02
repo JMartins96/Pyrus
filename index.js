@@ -202,15 +202,37 @@ btnClosePrivacidade.addEventListener('click', function(){
 // Ativa e desativa escrita em "outro" no formulário
 document.addEventListener("DOMContentLoaded", () => {
   const outroCheckbox = document.querySelector("input[name='outro']");
-  const outroInput = document.getElementById("outro");
+  const outroInput = document.querySelector("input[name='outro-texto']");
+
+  if (!outroCheckbox || !outroInput) return;
+
+  // Initialize input as disabled
+  outroInput.disabled = !outroCheckbox.checked;
 
   outroCheckbox.addEventListener("change", () => {
-    outroInput.disabled = !outroCheckbox.checked;
-    if (!outroCheckbox.checked) {
-      outroInput.value = ""; // limpa se desmarcar
+    if (outroCheckbox.checked) {
+      outroInput.disabled = false;
+      outroInput.focus();
+    } else {
+      outroInput.value = "";
+      outroInput.disabled = true;
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
+  const rgpdCheckbox = document.getElementById("RGPD");
+
+  form.addEventListener("submit", function (e) {
+    if (!rgpdCheckbox.checked) {
+      e.preventDefault(); // stop form submission
+      alert("Tem de aceitar a Política de Privacidade (RGPD) para submeter o formulário.");
+      rgpdCheckbox.focus();
+    }
+  });
+});
+
 
 // Form submission confirmation
 

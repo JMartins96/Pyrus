@@ -767,12 +767,12 @@ input::placeholder{
     color: #f7f7f7;
 }
 
-input[type=text], input[type=email], input[type=number], select{
+input[type=text], input[type=email], input[type=number], input[type=tel], select{
     height: 2.4rem;
     padding:0.3rem 0.8rem;
 }
 
-input[type=text], input[type=email], input[type=number] { 
+input[type=text], input[type=email], input[type=number], input[type=tel] { 
     font-family: inherit;
     font-size: inherit;
     background-color: white;
@@ -800,7 +800,9 @@ input[type=text], input[type=email], input[type=number] {
 }
 
 .custom-checkbox input[type="checkbox"] {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .custom-checkbox .checkmark {

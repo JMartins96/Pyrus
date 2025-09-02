@@ -45,8 +45,9 @@ app.post("/api/send-email", async (req, res) => {
     });
 
     const tipos = Object.keys(formData)
-      .filter(k => ['vender-comprar', 'parceiro-projeto', 'valorizar', 'outro'].includes(k))
-      .join(", ");
+      .filter(k => ['vender-imóvel', 'parceiro-projeto', 'comprar-imóvel', 'outro'].includes(k))
+      .map(k => k === 'outro' ? `Outro (${formData['outro-texto'] || ''})` : k)
+      .join(', ');
 
 
   const mailOptions = {
@@ -55,14 +56,15 @@ app.post("/api/send-email", async (req, res) => {
     subject: `Nova Solicitação: ${formData.assunto||"(sem assunto)"}`,
     text:
     `Nome: ${formData.nome || ""}
-    Telemóvel: ${formData.telemóvel || formData.telemovel || ""}
+    Telemóvel: ${formData.telemovel || ""}
     Email: ${formData.email || ""}
     Tipo de Solicitação: ${tipos}
     Assunto: ${formData.assunto || ""}
-    Descrição: ${formData.descrição || formData.descricao || ""}
+    Descrição: ${formData.descricao || ""}
     Desejo de Contacto: ${formData.contacto || ""}
-    Data de Contacto: ${formData["reunião-data"] || formData["reuniao-data"] || ""}
-    Hora de Contacto: ${formData["reunião-hora"] || formData["reuniao-hora"] || ""}`
+    Data de Contacto: ${formData["reuniao-data"] || ""}
+    Hora de Contacto: ${formData["reuniao-hora"] || ""}
+    Contacto Preferido: ${formData["contacto-preferencia"] || ""}`
     };
   await transporter.sendMail(mailOptions);
     res.send("Solicitação enviada com sucesso!");

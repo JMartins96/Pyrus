@@ -27,8 +27,8 @@ app.post("/api/send-email", async (req, res) => {
   try {
     const formData = req.body;
     // Usa variáveis de ambiente (NÃO hard-code!)
-    const user = process.env.GMAIL_USER;
-    const pass = process.env.GMAIL_PASS;
+    const user = "noreply.advir@gmail.com"; // Teu email
+    const pass = "ihpgedswadmqtceh"; // Palavra-passe ou App Password
 
     if (!user || !pass) {
        return res.status(500).send("Configuração de email em falta.");
